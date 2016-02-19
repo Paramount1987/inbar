@@ -78,6 +78,10 @@ jQuery(function($){
 					self.$filterLi.removeClass('active');
 					self.$filterAll.parent('li').addClass('active');
 				});
+				$('.filter-list .filter-all').on('click', function(){
+					self.$filterLi.removeClass('active');
+					$(this).parent('li').addClass('active');
+				});
 			}
 		};
 		filter.init();
@@ -131,7 +135,7 @@ jQuery(function($){
 			$('.header-user-profile').addClass('hover');
 		});
 		$('.header-user-profile').on('mouseleave',function(){
-			
+
 			$('.header-user-profile').removeClass('hover');
 		});
 		//end
