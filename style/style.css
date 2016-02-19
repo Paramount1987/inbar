@@ -399,7 +399,7 @@ nav { display: inline-block; }
 .chart-body { padding: 20px 0; line-height: 1.25; }
 .chart-body p { margin: 10px 0; }
 
-.chart-title { display: inline-block; margin: 0 0 7px 0; text-transform: uppercase; border-bottom: 2px solid #ff4e00; color: #000; font: normal 36px/30px "engravers-gothic-bold"; }
+.chart-title { display: inline-block; margin: 5px 0 8px 0; text-transform: uppercase; border-bottom: 2px solid #ff4e00; color: #000; font: normal 36px/30px "engravers-gothic-bold"; }
 
 .chart-list { margin: 20px 0 0 0; padding: 0; list-style: none; }
 .chart-list > li { margin: 14px 0; }
@@ -448,26 +448,32 @@ nav { display: inline-block; }
 .inbar-li.selected { border-color: #ff4e00; }
 .inbar-li .inbar-recepi { display: none; }
 
-.inbar-li-block { width: 100%; }
+.inbar-li-block { width: 100%; padding-top: 20px; }
 .inbar-li-block .inbar-body, .inbar-li-block .inbar-photo { display: inline-block; vertical-align: top; }
 .inbar-li-block .inbar-body { width: 380px; padding: 0 0 0 25px; }
-.inbar-li-block .inbar-body .inbar-body-title { margin: 0; }
+.inbar-li-block .inbar-body .inbar-body-title { margin: 0; display: inline-block; }
 .inbar-li-block .inbar-photo { width: 180px; padding-top: 20px; }
-.inbar-li-block .inbar-recepi { display: inline-block; font-size: 10px; font-weight: bold; text-transform: uppercase; margin: 0 0 0 10px; }
+.inbar-li-block .inbar-recepi { display: inline-block; font-size: 10px; font-weight: bold; text-transform: uppercase; margin: 0 0 10px 10px; }
 .inbar-li-block .inbar-recepi .i-man { margin-right: 6px; }
 
-.inbar-li-block .inbar-title { min-height: auto; display: inline-block; }
+.inbar-li-block .inbar-title { min-height: auto; display: inline-block; margin-bottom: 10px; }
 
 .inbar-li-block .dot-list { margin: 15px 0; }
 
 .inbar-body { padding: 10px 0 0 0; }
 
-.inbar-title { min-height: 50px; text-transform: uppercase; font: normal 30px/25px "engravers-gothic-bold"; }
+.inbar-title { margin-top: 5px; min-height: 50px; text-transform: uppercase; font: normal 30px/25px "engravers-gothic-bold"; }
 
 .inbar-body-title { margin: 25px 0 15px 0; text-transform: uppercase; font: normal 24px/24px "reforma-grotesk-demi-regular"; }
 
 .inbar-photo { text-align: center; height: 180px; }
 .inbar-photo img { max-width: 100%; }
+
+.inbar-pics { margin: 15px 0 0 -10px; line-height: 45px; vertical-align: bottom; }
+.inbar-pics img { margin-left: 10px; margin-bottom: 10px; vertical-align: bottom; max-width: 100%; }
+
+.inbar-li-block .inbar-pics { display: inline-block; margin: 0; }
+.inbar-li-block .inbar-pics img { margin-bottom: 0; margin-top: 10px; }
 
 .inbar-li-icon { position: absolute; top: 10px; right: 10px; width: 22px; height: 22px; border: 2px solid #e5e5e5; border-radius: 22px; cursor: pointer; }
 .inbar-li-icon:before, .inbar-li-icon:after { content: ""; position: absolute; top: 50%; left: 50%; width: 2px; height: 12px; background: #e5e5e5; margin: -6px 0 0 -1px; -webkit-backface-visibility: hidden; backface-visibility: hidden; -webkit-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; }
