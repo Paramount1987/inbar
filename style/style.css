@@ -1,5 +1,61 @@
 @font-face { font-family: 'reforma-grotesk-demi-regular'; src: url("../fonts/reforma-grotesk-demi-regular.eot"); src: url("../fonts/reforma-grotesk-demi-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/reforma-grotesk-demi-regular.woff") format("woff"), url("../fonts/reforma-grotesk-demi-regular.ttf") format("truetype"), url("../fonts/reforma-grotesk-demi-regular.svg#reforma-grotesk-demi-regular") format("svg"); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'engravers-gothic-bold'; src: url("../fonts/engravers-gothic-bold.eot"); src: url("../fonts/engravers-gothic-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/engravers-gothic-bold.woff") format("woff"), url("../fonts/engravers-gothic-bold.ttf") format("truetype"), url("../fonts/engravers-gothic-bold.svg#engravers-gothic-bold") format("svg"); font-weight: normal; font-style: normal; }
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home { width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home { @include sprite-width($icon-home);
+}
+
+.icon-email { @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+/*
+The `sprites` mixin generates identical output to the CSS template but can be overridden inside of SCSS
+*/
+.arr-left { background-image: url(../img/icons.png); background-position: -110px -38px; width: 11px; height: 18px; display: inline-block; }
+
+.arr-right { background-image: url(../img/icons.png); background-position: -110px 0px; width: 11px; height: 18px; display: inline-block; }
+
+.i-custom-gray { background-image: url(../img/icons.png); background-position: 0px 0px; width: 16px; height: 16px; display: inline-block; }
+
+.i-custom-orange { background-image: url(../img/icons.png); background-position: -36px 0px; width: 16px; height: 16px; display: inline-block; }
+
+.i-exit-gray { background-image: url(../img/icons.png); background-position: 0px -103px; width: 10px; height: 15px; display: inline-block; }
+
+.i-exit-orange { background-image: url(../img/icons.png); background-position: -37px -36px; width: 10px; height: 15px; display: inline-block; }
+
+.i-mail-gray { background-image: url(../img/icons.png); background-position: -72px 0px; width: 18px; height: 12px; display: inline-block; }
+
+.i-mail-orange { background-image: url(../img/icons.png); background-position: 0px -71px; width: 18px; height: 12px; display: inline-block; }
+
+.i-mail-white { background-image: url(../img/icons.png); background-position: -72px -32px; width: 18px; height: 12px; display: inline-block; }
+
+.i-man { background-image: url(../img/icons.png); background-position: 0px -36px; width: 17px; height: 15px; display: inline-block; }
+
+.i-user-gray { background-image: url(../img/icons.png); background-position: -30px -103px; width: 10px; height: 13px; display: inline-block; }
+
+.i-user-orange { background-image: url(../img/icons.png); background-position: -60px -103px; width: 10px; height: 13px; display: inline-block; }
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -255,11 +311,12 @@ h1 { margin: 0; text-transform: uppercase; font: normal 60px/60px 'engravers-got
 #inbar-slide ul li .slide-x:after { -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
 
 /* Controls */
-.controls .nextPage, .controls .prevPage { position: absolute; z-index: 10; top: 50%; height: 18px; margin-top: -12px; }
+.controls .nextPage, .controls .prevPage { position: absolute; z-index: 10; top: 50%; margin-top: -18px; cursor: pointer; -webkit-transition: all linear 0.2s; -o-transition: all linear 0.2s; transition: all linear 0.2s; opacity: 0.1; filter: alpha(opacity=10); }
+.controls .nextPage:hover, .controls .prevPage:hover { opacity: 1; filter: alpha(opacity=100); }
 
-.controls .nextPage { right: 0; }
+.controls .nextPage { right: 22px; }
 
-.controls .prevPage { left: 0; }
+.controls .prevPage { left: 22px; }
 
 header { background: #000; height: 80px; padding: 3px 0 0 0; min-width: 1190px; }
 header .container { width: 1190px; padding: 0 15px; }
@@ -302,12 +359,29 @@ nav { display: inline-block; }
 
 .header-user-mail { color: #fff; text-decoration: underline; font-size: 12px; font-weight: bold; }
 .header-user-mail:hover, .header-user-mail:focus { color: #ff4e00; text-decoration: none; }
+.header-user-mail:hover .i-mail-white, .header-user-mail:focus .i-mail-white { background-position: 0 -71px; }
+
+.header-user-mail .i-mail-white { position: relative; top: 2px; margin-right: 8px; }
 
 .user-nav { position: absolute; z-index: 5; top: 50px; left: 0; width: 100%; padding: 3px 12px 0 12px; margin: 0; list-style: none; background: #fff; opacity: 0; filter: alpha(opacity=0); -webkit-box-shadow: 0px 14px 12px -4px rgba(0, 0, 0, 0.25); box-shadow: 0px 14px 12px -4px rgba(0, 0, 0, 0.25); }
 .user-nav > li { border-top: 1px solid #e5e5e5; }
 
 .user-nav-link { display: block; padding: 20px 0 20px 13px; color: #999; font-weight: bold; font-size: 12px; text-transform: uppercase; }
 .user-nav-link:hover, .user-nav-link:focus { color: #ff4e00; text-decoration: none; }
+
+.user-nav-link .icon { position: relative; top: 2px; margin: 0 17px 0 0; }
+
+.user-nav-link .i-mail-gray { top: 1px; margin-left: -4px; margin-right: 13px; }
+
+.user-nav-link .i-custom-gray { top: 3px; margin-left: -3px; margin-right: 14px; }
+
+.user-nav-link:hover .i-user-gray { background-position: -60px -103px; }
+
+.user-nav-link:hover .i-mail-gray { background-position: 0 -71px; }
+
+.user-nav-link:hover .i-custom-gray { background-position: -36px 0; }
+
+.user-nav-link:hover .i-exit-gray { background-position: -37px -36px; }
 
 .wrapper { min-width: 1190px; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 
@@ -325,7 +399,7 @@ nav { display: inline-block; }
 .chart-body { padding: 20px 0; line-height: 1.25; }
 .chart-body p { margin: 10px 0; }
 
-.chart-title { display: inline-block; margin: 0 0 ypx 0; text-transform: uppercase; border-bottom: 2px solid #ff4e00; color: #000; font: normal 36px/30px "engravers-gothic-bold"; }
+.chart-title { display: inline-block; margin: 0 0 7px 0; text-transform: uppercase; border-bottom: 2px solid #ff4e00; color: #000; font: normal 36px/30px "engravers-gothic-bold"; }
 
 .chart-list { margin: 20px 0 0 0; padding: 0; list-style: none; }
 .chart-list > li { margin: 14px 0; }
@@ -372,14 +446,17 @@ nav { display: inline-block; }
 
 .inbar-li { position: relative; width: 48.5%; padding: 0 25px 20px 30px; border: 1px solid #e5e5e5; margin-bottom: 20px; }
 .inbar-li.selected { border-color: #ff4e00; }
+.inbar-li .inbar-recepi { display: none; }
 
 .inbar-li-block { width: 100%; }
 .inbar-li-block .inbar-body, .inbar-li-block .inbar-photo { display: inline-block; vertical-align: top; }
 .inbar-li-block .inbar-body { width: 380px; padding: 0 0 0 25px; }
 .inbar-li-block .inbar-body .inbar-body-title { margin: 0; }
 .inbar-li-block .inbar-photo { width: 180px; padding-top: 20px; }
+.inbar-li-block .inbar-recepi { display: inline-block; font-size: 10px; font-weight: bold; text-transform: uppercase; margin: 0 0 0 10px; }
+.inbar-li-block .inbar-recepi .i-man { margin-right: 6px; }
 
-.inbar-li-block .inbar-title { min-height: auto; }
+.inbar-li-block .inbar-title { min-height: auto; display: inline-block; }
 
 .inbar-li-block .dot-list { margin: 15px 0; }
 

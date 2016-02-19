@@ -1,0 +1,216 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$arr-left-name: 'arr-left';
+$arr-left-x: 110px;
+$arr-left-y: 38px;
+$arr-left-offset-x: -110px;
+$arr-left-offset-y: -38px;
+$arr-left-width: 11px;
+$arr-left-height: 18px;
+$arr-left-total-width: 121px;
+$arr-left-total-height: 118px;
+$arr-left-image: '../img/icons.png';
+$arr-left: (110px, 38px, -110px, -38px, 11px, 18px, 121px, 118px, '../img/icons.png', 'arr-left', );
+$arr-right-name: 'arr-right';
+$arr-right-x: 110px;
+$arr-right-y: 0px;
+$arr-right-offset-x: -110px;
+$arr-right-offset-y: 0px;
+$arr-right-width: 11px;
+$arr-right-height: 18px;
+$arr-right-total-width: 121px;
+$arr-right-total-height: 118px;
+$arr-right-image: '../img/icons.png';
+$arr-right: (110px, 0px, -110px, 0px, 11px, 18px, 121px, 118px, '../img/icons.png', 'arr-right', );
+$i-custom-gray-name: 'i-custom-gray';
+$i-custom-gray-x: 0px;
+$i-custom-gray-y: 0px;
+$i-custom-gray-offset-x: 0px;
+$i-custom-gray-offset-y: 0px;
+$i-custom-gray-width: 16px;
+$i-custom-gray-height: 16px;
+$i-custom-gray-total-width: 121px;
+$i-custom-gray-total-height: 118px;
+$i-custom-gray-image: '../img/icons.png';
+$i-custom-gray: (0px, 0px, 0px, 0px, 16px, 16px, 121px, 118px, '../img/icons.png', 'i-custom-gray', );
+$i-custom-orange-name: 'i-custom-orange';
+$i-custom-orange-x: 36px;
+$i-custom-orange-y: 0px;
+$i-custom-orange-offset-x: -36px;
+$i-custom-orange-offset-y: 0px;
+$i-custom-orange-width: 16px;
+$i-custom-orange-height: 16px;
+$i-custom-orange-total-width: 121px;
+$i-custom-orange-total-height: 118px;
+$i-custom-orange-image: '../img/icons.png';
+$i-custom-orange: (36px, 0px, -36px, 0px, 16px, 16px, 121px, 118px, '../img/icons.png', 'i-custom-orange', );
+$i-exit-gray-name: 'i-exit-gray';
+$i-exit-gray-x: 0px;
+$i-exit-gray-y: 103px;
+$i-exit-gray-offset-x: 0px;
+$i-exit-gray-offset-y: -103px;
+$i-exit-gray-width: 10px;
+$i-exit-gray-height: 15px;
+$i-exit-gray-total-width: 121px;
+$i-exit-gray-total-height: 118px;
+$i-exit-gray-image: '../img/icons.png';
+$i-exit-gray: (0px, 103px, 0px, -103px, 10px, 15px, 121px, 118px, '../img/icons.png', 'i-exit-gray', );
+$i-exit-orange-name: 'i-exit-orange';
+$i-exit-orange-x: 37px;
+$i-exit-orange-y: 36px;
+$i-exit-orange-offset-x: -37px;
+$i-exit-orange-offset-y: -36px;
+$i-exit-orange-width: 10px;
+$i-exit-orange-height: 15px;
+$i-exit-orange-total-width: 121px;
+$i-exit-orange-total-height: 118px;
+$i-exit-orange-image: '../img/icons.png';
+$i-exit-orange: (37px, 36px, -37px, -36px, 10px, 15px, 121px, 118px, '../img/icons.png', 'i-exit-orange', );
+$i-mail-gray-name: 'i-mail-gray';
+$i-mail-gray-x: 72px;
+$i-mail-gray-y: 0px;
+$i-mail-gray-offset-x: -72px;
+$i-mail-gray-offset-y: 0px;
+$i-mail-gray-width: 18px;
+$i-mail-gray-height: 12px;
+$i-mail-gray-total-width: 121px;
+$i-mail-gray-total-height: 118px;
+$i-mail-gray-image: '../img/icons.png';
+$i-mail-gray: (72px, 0px, -72px, 0px, 18px, 12px, 121px, 118px, '../img/icons.png', 'i-mail-gray', );
+$i-mail-orange-name: 'i-mail-orange';
+$i-mail-orange-x: 0px;
+$i-mail-orange-y: 71px;
+$i-mail-orange-offset-x: 0px;
+$i-mail-orange-offset-y: -71px;
+$i-mail-orange-width: 18px;
+$i-mail-orange-height: 12px;
+$i-mail-orange-total-width: 121px;
+$i-mail-orange-total-height: 118px;
+$i-mail-orange-image: '../img/icons.png';
+$i-mail-orange: (0px, 71px, 0px, -71px, 18px, 12px, 121px, 118px, '../img/icons.png', 'i-mail-orange', );
+$i-mail-white-name: 'i-mail-white';
+$i-mail-white-x: 72px;
+$i-mail-white-y: 32px;
+$i-mail-white-offset-x: -72px;
+$i-mail-white-offset-y: -32px;
+$i-mail-white-width: 18px;
+$i-mail-white-height: 12px;
+$i-mail-white-total-width: 121px;
+$i-mail-white-total-height: 118px;
+$i-mail-white-image: '../img/icons.png';
+$i-mail-white: (72px, 32px, -72px, -32px, 18px, 12px, 121px, 118px, '../img/icons.png', 'i-mail-white', );
+$i-man-name: 'i-man';
+$i-man-x: 0px;
+$i-man-y: 36px;
+$i-man-offset-x: 0px;
+$i-man-offset-y: -36px;
+$i-man-width: 17px;
+$i-man-height: 15px;
+$i-man-total-width: 121px;
+$i-man-total-height: 118px;
+$i-man-image: '../img/icons.png';
+$i-man: (0px, 36px, 0px, -36px, 17px, 15px, 121px, 118px, '../img/icons.png', 'i-man', );
+$i-user-gray-name: 'i-user-gray';
+$i-user-gray-x: 30px;
+$i-user-gray-y: 103px;
+$i-user-gray-offset-x: -30px;
+$i-user-gray-offset-y: -103px;
+$i-user-gray-width: 10px;
+$i-user-gray-height: 13px;
+$i-user-gray-total-width: 121px;
+$i-user-gray-total-height: 118px;
+$i-user-gray-image: '../img/icons.png';
+$i-user-gray: (30px, 103px, -30px, -103px, 10px, 13px, 121px, 118px, '../img/icons.png', 'i-user-gray', );
+$i-user-orange-name: 'i-user-orange';
+$i-user-orange-x: 60px;
+$i-user-orange-y: 103px;
+$i-user-orange-offset-x: -60px;
+$i-user-orange-offset-y: -103px;
+$i-user-orange-width: 10px;
+$i-user-orange-height: 13px;
+$i-user-orange-total-width: 121px;
+$i-user-orange-total-height: 118px;
+$i-user-orange-image: '../img/icons.png';
+$i-user-orange: (60px, 103px, -60px, -103px, 10px, 13px, 121px, 118px, '../img/icons.png', 'i-user-orange', );
+$spritesheet-width: 121px;
+$spritesheet-height: 118px;
+$spritesheet-image: '../img/icons.png';
+$spritesheet-sprites: ($arr-left, $arr-right, $i-custom-gray, $i-custom-orange, $i-exit-gray, $i-exit-orange, $i-mail-gray, $i-mail-orange, $i-mail-white, $i-man, $i-user-gray, $i-user-orange, );
+$spritesheet: (121px, 118px, '../img/icons.png', $spritesheet-sprites, );
+
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+  display: inline-block;
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+*/
+
+
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+//
+@include sprites($spritesheet-sprites);
+
+

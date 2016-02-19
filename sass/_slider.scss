@@ -109,13 +109,18 @@
 	position: absolute;
 	z-index: 10;
 	top: 50%; 
-	height: 18px;
-	margin-top: -12px;
+	margin-top: -18px;
+	cursor: pointer;
+	@include transition(all linear 0.2s);
+	@include opacity(.1);
+	&:hover{
+		@include opacity(1);
+	}
 }
 .controls .nextPage{
-	right: 0;
+	right: 22px;
 }
 .controls .prevPage{
-	left: 0;
+	left: 22px;
 }
 
