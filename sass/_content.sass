@@ -1,0 +1,79 @@
+.wrapper
+  min-width: 1190px
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+
+.content
+  padding: 40px 0
+
+.content-left
+  width: 67%
+  float: left
+
+.content-right
+  width: 31%
+  float: right
+
+////////////////////////////chart block
+.chart-block
+  border: 2px solid #f3f1ef
+  padding: 3px
+  .chart-block-inner
+    background: #f3f1ef
+    padding: 30px 45px
+
+.chart-header
+  text-align: center
+
+.chart-body
+  padding: 20px 0
+  line-height: 1.25
+  p
+    margin: 10px 0
+
+.chart-title
+  display: inline-block
+  margin: 0 0 ypx 0
+  text-transform: uppercase
+  border-bottom: 2px solid $orange
+  color: $black
+  font: normal 36px/30px 'engravers-gothic-bold'
+
+.chart-list
+  margin: 20px 0 0 0
+  padding: 0
+  list-style: none
+  > li
+    margin: 14px 0
+
+.chart-list-text
+  position: relative
+  color: $black
+  font-weight: bold
+  text-transform: uppercase
+
+.chart-footer
+  text-align: center
+
+.char-list-x  
+  position: absolute
+  top: 100%
+  width: 11px
+  height: 13px
+  margin-top: -15px
+  cursor: pointer
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 12px
+    width: 3px
+    height: 13px
+    background: $orange
+    @include transition(all linear .1s)
+  &:before
+    @include rotate(45deg)
+  &:after
+    @include rotate(-45deg)
+////////////////////////////////end 

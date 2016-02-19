@@ -1,0 +1,34 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  padding: 6px 25px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  text-transform: uppercase;
+  font: normal 18px/22px 'reforma-grotesk-demi-regular';
+  letter-spacing: 1px;
+  @include user-select(none);
+  @include transition(all linear .2s);
+}
+
+.btn-orange{
+  color: #fff;
+  background: $orange;
+  &:hover,
+  &:focus{
+    background: #fff;
+    color: $orange;
+    text-decoration: none;
+  }
+}

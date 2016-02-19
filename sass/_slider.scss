@@ -1,0 +1,121 @@
+
+/* Example wrapper */
+.inbar-slide-wrap {
+	position: relative;
+	margin: 20px 0;
+	padding: 0 80px 10px 80px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+/* Frame */
+#inbar-slide {
+	height: 130px;
+	overflow: hidden;
+}
+#inbar-slide ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-size: 50px;
+}
+#inbar-slide ul li {
+	position: relative;
+	float: left;
+	width: 104px;
+	height: 100%;
+	margin: 0 1px 0 0;
+	padding: 10px 10px 0 10px;
+	text-align: center;
+	cursor: pointer;
+
+}
+#inbar-slide ul li.selected{
+	.slide-x{
+		display: block;
+	}
+	.inbar-slide-item{
+		cursor: default;
+	@include opacity(1);
+}
+
+}
+
+#inbar-slide ul li.active {
+	color: #fff;
+	background: #a03232;
+}
+
+.inbar-slide-item{
+	@include opacity(.1);
+	@include transition(all linear .2s);
+	&:hover{
+		@include opacity(1);
+	}
+}
+
+.inbar-slide-img{
+	height: 70px;
+	line-height: 70px;
+	vertical-align: bottom;
+}
+
+.inbar-slide-img img{
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+.inbar-slide-text{
+	margin: 10px 0;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#inbar-slide ul li {
+	position: relative;
+	.slide-x{
+		position: absolute;
+		display: none;
+		z-index: 10;
+		top: 0;
+		right: 10px;
+		width: 10px;
+		height: 10px;
+		color: $orange;
+		cursor: pointer;
+		&:before,
+		&:after{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 1px;
+				height: 9px;
+				background: $orange;
+			}
+		&:before{
+			@include rotate(45deg);
+		}
+		&:after{
+			@include rotate(-45deg);
+		}
+	}
+
+}
+/* Controls */
+.controls .nextPage,
+.controls .prevPage{
+	position: absolute;
+	z-index: 10;
+	top: 50%; 
+	height: 18px;
+	margin-top: -12px;
+}
+.controls .nextPage{
+	right: 0;
+}
+.controls .prevPage{
+	left: 0;
+}
+

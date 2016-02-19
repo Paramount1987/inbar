@@ -1,0 +1,133 @@
+.dot-list 
+  padding: 0
+  overflow-x: hidden
+  list-style: none
+  li
+    margin: 0 0 8px 0
+
+.dot-list li:before 
+  float: left
+  width: 0
+  white-space: nowrap
+  color: #e5e5e5
+  margin-top: -6px
+  content: "......................." "......................." "......................." "......................."
+
+.dot-list span:first-child 
+  padding-right: 5px
+  background: white
+
+.dot-list span + span 
+  float: right
+  padding-left: 5px
+  background: $white
+  white-space: nowrap
+  overflow: hidden
+  font-size: 12px
+  font-weight: bold
+
+.dot-list span.name-components
+  display: inline-block
+  max-width: 220px
+  white-space: nowrap
+  overflow: hidden
+  text-transform: uppercase
+  font-size: 12px
+//////flexbox drinks
+.flexbox
+  padding: 0
+  margin: 0
+  list-style: none
+  @include flexbox()
+  @include flex-wrap(wrap)
+  @include justify-content(space-between)
+
+//inbar
+.inbar-li
+  position: relative
+  width: 48.5%
+  padding: 0 25px 20px 30px
+  border: 1px solid #e5e5e5
+  margin-bottom: 20px
+  &.selected
+    border-color: $orange
+
+.inbar-li-block
+  width: 100%
+  .inbar-body,
+  .inbar-photo
+    display: inline-block
+    vertical-align: top
+  .inbar-body
+    width: 380px
+    padding: 0 0 0 25px
+    .inbar-body-title
+      margin: 0
+  .inbar-photo
+    width: 180px  
+    padding-top: 20px
+      
+.inbar-li-block .inbar-title
+  min-height: auto
+
+.inbar-li-block .dot-list 
+  margin: 15px 0
+
+.inbar-body
+  padding: 10px 0 0 0
+
+.inbar-title
+  min-height: 50px
+  text-transform: uppercase
+  font: normal 30px/25px 'engravers-gothic-bold'
+
+.inbar-body-title
+  margin: 25px 0 15px 0
+  text-transform: uppercase
+  font: normal 24px/24px 'reforma-grotesk-demi-regular'
+
+.inbar-photo
+  text-align: center
+  height: 180px
+  img
+    max-width: 100%
+
+//inbar-li-icon
+.inbar-li-icon
+  position: absolute
+  top: 10px
+  right: 10px
+  width: 22px
+  height: 22px
+  border: 2px solid #e5e5e5
+  border-radius: 22px
+  cursor: pointer
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 2px
+    height: 12px
+    background: #e5e5e5
+    margin: -6px 0 0 -1px
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    @include transition(all linear .2s)
+  &:before
+    width: 12px
+    height: 2px
+    margin: -1px 0 0 -6px
+    @include transform-origin(50% 50%)
+  &:after 
+    @include transform-origin(50%  50%) 
+
+.selected .inbar-li-icon
+  border-color: $orange
+  &:before
+    @include rotate(225deg)
+    background: $orange
+  &:after
+    @include rotate(-135deg)  
+    background: $orange
