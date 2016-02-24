@@ -354,8 +354,10 @@ nav { display: inline-block; }
 .header-user-profile.hover .header-user-name { color: #000; }
 .header-user-profile.hover .header-user-mail { display: none; }
 .header-user-profile.hover .user-nav { opacity: 1; filter: alpha(opacity=100); }
+.header-user-profile.hover .triangle-r { border-color: transparent transparent #000 transparent; }
 
-.header-user-name { display: block; margin: 0 0 3px 0; color: #fff; font-weight: bold; font-size: 12px; text-transform: uppercase; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.header-user-name { position: relative; display: block; margin: 0 0 3px 0; color: #fff; font-weight: bold; font-size: 12px; text-transform: uppercase; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.header-user-name .triangle-r { position: absolute; bottom: 4px; margin-left: 4px; width: 0; height: 0; border-style: solid; border-width: 0 0 7px 7px; border-color: transparent transparent #fff transparent; }
 
 .header-user-mail { color: #fff; text-decoration: underline; font-size: 12px; font-weight: bold; }
 .header-user-mail:hover, .header-user-mail:focus { color: #ff4e00; text-decoration: none; }
@@ -469,7 +471,7 @@ nav { display: inline-block; }
 .inbar-photo { text-align: center; height: 180px; }
 .inbar-photo img { max-width: 100%; }
 
-.inbar-pics { margin: 15px 0 0 -10px; line-height: 45px; vertical-align: bottom; }
+.inbar-pics { margin: 15px 0 0 -10px; line-height: 45px; height: 54px; vertical-align: bottom; }
 .inbar-pics img { margin-left: 10px; margin-bottom: 10px; vertical-align: bottom; max-width: 100%; }
 
 .inbar-li-block .inbar-pics { display: inline-block; margin: 0; }
